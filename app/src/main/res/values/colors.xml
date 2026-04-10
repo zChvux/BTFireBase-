@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Movie App Theme (White & Pink Accent) -->
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="surfaceColor">#FFFFFF</color>
+    <color name="primaryColor">#FFFFFF</color>
+
+    <!-- Accent: Pink/Rose color as seen in your screenshots -->
+    <color name="accentColor">#E91E63</color>
+    <color name="accentVariant">#C2185B</color>
+
+    <!-- Text Colors (Dark for visibility on white background) -->
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+    <color name="gray_text">#757575</color>
+    <color name="dividerColor">#EEEEEE</color>
+
+    <color name="star_gold">#FFC107</color>
+</resources>

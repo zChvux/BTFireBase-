@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_booking"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@android:drawable/ic_menu_revert"
+            app:title="Booking"
+            app:titleCentered="true"
+            app:titleTextColor="@color/textPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvBookingMovieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Movie Title"
+                android:textColor="@color/textPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Theater"
+                android:textColor="@color/textPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerTheater"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:popupBackground="#FFFFFF"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Showtime"
+                android:textColor="@color/textPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerShowtime"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:popupBackground="#FFFFFF"
+                android:spinnerMode="dropdown" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/dividerColor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="Select Seat"
+                android:textColor="@color/textPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="SCREEN"
+                android:textColor="@color/textSecondary"
+                android:textSize="10sp" />
+
+            <GridLayout
+                android:id="@+id/gridSeats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:columnCount="6">
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:background="@color/accentColor" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Selected"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="16dp"
+                    android:background="#BDBDBD" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Booked"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="16dp"
+                    android:background="#F5F5F5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Available"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selected Seat:"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvSelectedSeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="None"
+                    android:textColor="@color/accentColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBook"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/accentColor"
+                android:text="Confirm Booking"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

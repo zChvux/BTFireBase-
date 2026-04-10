@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="0dp"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivMoviePoster"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/ic_menu_gallery"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedTopCorners" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/ivMoviePoster">
+
+            <TextView
+                android:id="@+id/tvMovieTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Movie Title" />
+
+            <TextView
+                android:id="@+id/tvMovieGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/textSecondary"
+                android:textSize="13sp"
+                android:text="Genre" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@android:drawable/btn_star_big_on"
+                    app:tint="@color/star_gold" />
+
+                <TextView
+                    android:id="@+id/tvMovieRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textColor="@color/star_gold"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:text="4.8" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

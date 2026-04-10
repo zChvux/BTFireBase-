@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Bai2" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/accentColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/white</item>
+        <item name="colorOnPrimaryContainer">@color/textPrimary</item>
+
+        <item name="android:windowBackground">@color/backgroundColor</item>
+        <item name="colorSurface">@color/surfaceColor</item>
+        <item name="colorOnSurface">@color/textPrimary</item>
+
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <style name="Theme.Bai2" parent="Base.Theme.Bai2" />
+</resources>
